@@ -1,0 +1,1 @@
+To install, just run "_StartInstaller.bat"
