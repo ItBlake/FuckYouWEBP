@@ -1,6 +1,5 @@
 @echo off
 cd /d %~dp0 > nul
-goto :test
 goto :install
 
 :install
@@ -16,7 +15,6 @@ TIMEOUT 2 > nul
 echo Files copied!
 echo.
 echo Adding FuckYouWEBP to startup...
-:test
 CreateShortcut "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startFuckYouWEBP.lnk" "c:\Program Files\FuckYouWEBP\startFuckYouWEBP.bat"
 exit
 TIMEOUT 1 > nul
