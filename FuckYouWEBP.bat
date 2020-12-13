@@ -1,5 +1,5 @@
 @echo off
-cd /d %~dp0 > nul
+cd /d "%~dp0" > nul
 goto :start
 
 :start
