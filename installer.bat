@@ -4,6 +4,13 @@ goto :install
 
 :install
 echo.
+echo Installing ImageMagik...
+echo.
+start /wait ImageMagikInstaller.exe
+TIMEOUT 1 > nul
+echo.
+echo ImageMagik Installed!
+echo.
 echo Copying files...
 echo.
 mkdir "c:\Program Files\FuckYouWEBP" > nul
