@@ -4,9 +4,14 @@ goto :install
 
 :install
 echo.
-echo Installing ImageMagik...
+echo Checking For ImageMagik...
 echo.
-start /wait ImageMagikInstaller.exe
+IF EXIST yourfilename (
+goto installCON 
+) ELSE (
+goto installEND
+)
+:installCON
 TIMEOUT 1 > nul
 echo.
 echo ImageMagik Installed!
@@ -34,4 +39,10 @@ echo.
 echo Press any key to quit the installer!
 pause > nul
 start "c:\Program Files\FuckYouWEBP\startFuckYouWEBP.bat"
+exit
+
+:installEND
+echo ImageMagik is not installed. Press any key to open the download page.
+pause > nul
+start "" https://www.imagemagick.org/script/download.php#windows
 exit
